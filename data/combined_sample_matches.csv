@@ -1,0 +1,21 @@
+competition,season,date,home_team,away_team,home_goals,away_goals,neutral_site
+EPL,2025-2026,2025-08-16,Arsenal,Chelsea,2,1,false
+EPL,2025-2026,2025-08-17,Liverpool,Manchester City,1,1,false
+EPL,2025-2026,2025-08-23,Chelsea,Liverpool,0,2,false
+EPL,2025-2026,2025-08-24,Manchester City,Arsenal,3,1,false
+EPL,2025-2026,2025-08-30,Arsenal,Liverpool,1,0,false
+EPL,2025-2026,2025-08-31,Chelsea,Manchester City,1,2,false
+EPL,2025-2026,2025-09-13,Liverpool,Arsenal,2,2,false
+EPL,2025-2026,2025-09-14,Manchester City,Chelsea,2,0,false
+EPL,2025-2026,2025-09-20,Chelsea,Arsenal,1,1,false
+EPL,2025-2026,2025-09-21,Manchester City,Liverpool,1,0,false
+WorldCup,2026,2026-06-11,Mexico,South Africa,2,0,true
+WorldCup,2026,2026-06-12,Canada,Bosnia and Herzegovina,1,1,true
+WorldCup,2026,2026-06-12,United States,Paraguay,4,1,true
+WorldCup,2026,2026-06-13,Brazil,Morocco,2,1,true
+WorldCup,2026,2026-06-14,England,Senegal,1,0,true
+WorldCup,2026,2026-06-15,France,Japan,3,1,true
+WorldCup,2026,2026-06-16,Argentina,Austria,2,2,true
+WorldCup,2026,2026-06-17,Spain,Colombia,2,0,true
+WorldCup,2026,2026-06-20,South Africa,Canada,0,1,true
+WorldCup,2026,2026-06-21,Bosnia and Herzegovina,Mexico,0,2,true

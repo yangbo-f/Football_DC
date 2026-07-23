@@ -1,0 +1,4 @@
+event_date,competition,home_team,away_team,market,selection,line,odds_decimal,bookmaker,captured_at,source
+2026-07-03,WorldCup,Spain,Austria,1X2,Home,,2.10,Manual,2026-07-02T00:00:00,Sample
+2026-07-03,WorldCup,Spain,Austria,1X2,Draw,,3.40,Manual,2026-07-02T00:00:00,Sample
+2026-07-03,WorldCup,Spain,Austria,1X2,Away,,3.60,Manual,2026-07-02T00:00:00,Sample

@@ -1,0 +1,21 @@
+competition,season,date,home_team,away_team,home_goals,away_goals,neutral_site
+EPL,2025-2026,2025-08-16,Arsenal,Chelsea,2,1,false
+EPL,2025-2026,2025-08-17,Liverpool,Manchester City,1,1,false
+EPL,2025-2026,2025-08-23,Chelsea,Liverpool,0,2,false
+EPL,2025-2026,2025-08-24,Manchester City,Arsenal,3,1,false
+EPL,2025-2026,2025-08-30,Arsenal,Liverpool,1,0,false
+EPL,2025-2026,2025-08-31,Chelsea,Manchester City,1,2,false
+EPL,2025-2026,2025-09-13,Liverpool,Arsenal,2,2,false
+EPL,2025-2026,2025-09-14,Manchester City,Chelsea,2,0,false
+EPL,2025-2026,2025-09-20,Chelsea,Arsenal,1,1,false
+EPL,2025-2026,2025-09-21,Manchester City,Liverpool,1,0,false
+EPL,2025-2026,2025-09-27,Liverpool,Chelsea,3,1,false
+EPL,2025-2026,2025-09-28,Arsenal,Manchester City,0,0,false
+EPL,2025-2026,2025-10-04,Arsenal,Chelsea,3,0,false
+EPL,2025-2026,2025-10-05,Liverpool,Manchester City,2,1,false
+EPL,2025-2026,2025-10-11,Chelsea,Liverpool,2,2,false
+EPL,2025-2026,2025-10-12,Manchester City,Arsenal,1,1,false
+EPL,2025-2026,2025-10-18,Arsenal,Liverpool,2,0,false
+EPL,2025-2026,2025-10-19,Chelsea,Manchester City,0,1,false
+EPL,2025-2026,2025-10-25,Liverpool,Arsenal,1,2,false
+EPL,2025-2026,2025-10-26,Manchester City,Chelsea,3,2,false

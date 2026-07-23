@@ -1,0 +1,9 @@
+.venv/
+.pycache/
+.pycache_check/
+__pycache__/
+*.py[cod]
+.DS_Store
+data/**/backups/
+.streamlit/local_state.json
+football_logo.png

@@ -1,0 +1,17 @@
+competition,season,date,home_team,away_team,home_goals,away_goals,neutral_site
+WorldCup,2026,2026-06-11,Mexico,South Africa,2,0,true
+WorldCup,2026,2026-06-12,Canada,Bosnia and Herzegovina,1,1,true
+WorldCup,2026,2026-06-12,United States,Paraguay,4,1,true
+WorldCup,2026,2026-06-13,Brazil,Morocco,2,1,true
+WorldCup,2026,2026-06-14,England,Senegal,1,0,true
+WorldCup,2026,2026-06-15,France,Japan,3,1,true
+WorldCup,2026,2026-06-16,Argentina,Austria,2,2,true
+WorldCup,2026,2026-06-17,Spain,Colombia,2,0,true
+WorldCup,2026,2026-06-20,South Africa,Canada,0,1,true
+WorldCup,2026,2026-06-21,Bosnia and Herzegovina,Mexico,0,2,true
+WorldCup,2026,2026-06-22,Paraguay,Brazil,1,1,true
+WorldCup,2026,2026-06-23,Morocco,United States,1,2,true
+WorldCup,2026,2026-06-24,Senegal,France,1,2,true
+WorldCup,2026,2026-06-25,Japan,England,0,1,true
+WorldCup,2026,2026-06-26,Austria,Spain,1,3,true
+WorldCup,2026,2026-06-27,Colombia,Argentina,1,2,true

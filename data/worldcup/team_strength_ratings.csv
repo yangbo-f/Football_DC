@@ -1,0 +1,33 @@
+team,confederation,rating,source
+Argentina,CONMEBOL,1660,local_prior
+France,UEFA,1655,local_prior
+Spain,UEFA,1645,local_prior
+England,UEFA,1640,local_prior
+Brazil,CONMEBOL,1635,local_prior
+Portugal,UEFA,1625,local_prior
+Netherlands,UEFA,1615,local_prior
+Belgium,UEFA,1605,local_prior
+Germany,UEFA,1600,local_prior
+Italy,UEFA,1595,local_prior
+Uruguay,CONMEBOL,1590,local_prior
+Colombia,CONMEBOL,1580,local_prior
+Croatia,UEFA,1580,local_prior
+Morocco,CAF,1575,local_prior
+Switzerland,UEFA,1570,local_prior
+Austria,UEFA,1565,local_prior
+Denmark,UEFA,1565,local_prior
+Mexico,CONCACAF,1550,local_prior
+United States,CONCACAF,1545,local_prior
+Japan,AFC,1540,local_prior
+Senegal,CAF,1535,local_prior
+Nigeria,CAF,1530,local_prior
+Egypt,CAF,1525,local_prior
+Iran,AFC,1520,local_prior
+South Korea,AFC,1515,local_prior
+Tunisia,CAF,1515,local_prior
+Australia,AFC,1500,local_prior
+Saudi Arabia,AFC,1490,local_prior
+Qatar,AFC,1485,local_prior
+South Africa,CAF,1480,local_prior
+China PR,AFC,1435,local_prior
+New Zealand,OFC,1450,local_prior
