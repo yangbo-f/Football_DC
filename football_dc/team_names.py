@@ -56,6 +56,7 @@ TEAM_NAME_ZH = {
     "Chelsea": "切尔西",
     "Chile": "智利",
     "China PR": "中国",
+    "Chinese Taipei": "中国台北",
     "Colombia": "哥伦比亚",
     "Comoros": "科摩罗",
     "Congo": "刚果共和国",

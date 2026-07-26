@@ -42,11 +42,16 @@ def train_competition_model(matches: pd.DataFrame, competition: str, half_life_d
 def apply_training_match_weights(matches: pd.DataFrame, competition: str) -> pd.DataFrame:
     weighted = matches.copy()
     weighted["match_weight"] = 1.0
-    if competition == "WorldCup" and "competition" in weighted.columns:
-        is_qualifier = weighted["competition"].astype(str) == "WorldCupQualifiers"
+    qualifier_codes = {
+        "WorldCup": "WorldCupQualifiers",
+        "WomenWorldCup": "WomenWorldCupQualifiers",
+    }
+    qualifier_code = qualifier_codes.get(competition)
+    if qualifier_code and "competition" in weighted.columns:
+        is_qualifier = weighted["competition"].astype(str) == qualifier_code
         weighted.loc[is_qualifier, "match_weight"] = 0.45
         if "stage" in weighted.columns:
             stage = weighted["stage"].fillna("").astype(str).str.lower()
-            knockout = (weighted["competition"].astype(str) == "WorldCup") & stage.str.contains("knockout")
+            knockout = (weighted["competition"].astype(str) == competition) & stage.str.contains("knockout")
             weighted.loc[knockout, "match_weight"] = 1.05
     return weighted

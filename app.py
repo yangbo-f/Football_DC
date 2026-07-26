@@ -117,10 +117,17 @@ def cached_train_model(matches_payload: str, competition: str, half_life_days: f
     return train_competition_model(matches, competition, half_life_days=half_life_days)
 
 
+QUALIFIER_COMPETITIONS = {
+    "WorldCup": "WorldCupQualifiers",
+    "WomenWorldCup": "WomenWorldCupQualifiers",
+}
+
+
 def optimize_worldcup_qualifiers(matches: pd.DataFrame, competition: str, home_team: str, away_team: str, enabled: bool) -> pd.DataFrame:
-    if not enabled or competition != "WorldCup" or "competition" not in matches.columns:
+    qualifier_code = QUALIFIER_COMPETITIONS.get(competition)
+    if not enabled or qualifier_code is None or "competition" not in matches.columns:
         return matches
-    is_qualifier = matches["competition"].astype(str) == "WorldCupQualifiers"
+    is_qualifier = matches["competition"].astype(str) == qualifier_code
     if not is_qualifier.any():
         return matches
     focus_teams = {home_team, away_team}
@@ -791,6 +798,8 @@ def team_input(label: str, teams: list[str], default_index: int, allow_manual: b
 def default_prediction_date(competition: str) -> date:
     if competition == "WorldCup":
         return date(2026, 7, 3)
+    if competition == "WomenWorldCup":
+        return date(2027, 6, 24)
     return date(2026, 7, 1)
 
 
@@ -805,6 +814,9 @@ def selectable_competitions(matches: pd.DataFrame) -> list[str]:
     if "WorldCupQualifiers" in competitions:
         competitions.add("WorldCup")
         competitions.discard("WorldCupQualifiers")
+    if "WomenWorldCupQualifiers" in competitions:
+        competitions.add("WomenWorldCup")
+        competitions.discard("WomenWorldCupQualifiers")
     return sorted(competitions)
 
 
@@ -814,6 +826,8 @@ def competition_display_name(code: str) -> str:
         return code
     if code == "WorldCup":
         return "世界杯（正赛 + 预选赛周期）"
+    if code == "WomenWorldCup":
+        return "女足世界杯（正赛 + 预选赛周期）"
     return config.label
 
 
@@ -926,7 +940,7 @@ def render_app_header(mode: str) -> None:
 def source_group_summary_from_keys(keys: set[str], data_sources=None) -> str:
     sources = data_sources or discover_data_sources()
     groups = []
-    for group in ["世界杯", "英超", "中超"]:
+    for group in ["世界杯", "女足世界杯", "英超", "中超"]:
         if any(source.key in keys and source_group(source) == group for source in sources):
             groups.append(group)
     return "+".join(groups) if groups else "未选数据"
@@ -1073,8 +1087,8 @@ def render_adjustment_status(base_prediction, adjusted_prediction, note: str, ho
 
 
 def model_scope_note(selected_competition: str) -> None:
-    if selected_competition == "WorldCup":
-        st.caption("模型口径：世界杯可合并正赛与预选赛周期训练；输出为 90 分钟概率，不预测点球或晋级。")
+    if selected_competition in {"WorldCup", "WomenWorldCup"}:
+        st.caption(f"模型口径：{competition_display_name(selected_competition)}可合并正赛与预选赛周期训练；输出为 90 分钟概率，不预测点球或晋级。")
     else:
         st.caption("模型口径：历史比分训练；赔率和人工修正只影响本场预测展示。")
 
@@ -1232,7 +1246,7 @@ def render_source_selector() -> list[str]:
         default_checked = source.key in persisted_keys if has_persisted_sources else source.label in defaults
         if bool(st.session_state.get(state_key, default_checked)):
             selected_group_names.add(source_group(source))
-    group_order = ["世界杯", "英超", "中超"]
+    group_order = ["世界杯", "女足世界杯", "英超", "中超"]
     for group in group_order:
         sources = [source for source in data_sources if source_group(source) == group]
         if not sources:
@@ -1399,7 +1413,7 @@ def main() -> None:
         qualifier_fast_mode = st.checkbox(
             "训练快速模式",
             value=True,
-            help="世界杯：只加入当前双方相关的预选赛。英超/中超：数据过多时保留最近比赛。用于避免大数据量训练卡顿或不收敛。",
+            help="世界杯/女足世界杯：只加入当前双方相关的预选赛。英超/中超：数据过多时保留最近比赛。用于避免大数据量训练卡顿或不收敛。",
         )
         uploaded_files = st.file_uploader("上传比赛 CSV", type=["csv"], accept_multiple_files=True)
         uploaded_odds_files = st.file_uploader("上传赔率 CSV", type=["csv"], accept_multiple_files=True)
@@ -1407,7 +1421,7 @@ def main() -> None:
         half_life_days = st.number_input("时间衰减半衰期（Half-life days）", min_value=0.0, value=365.0, step=30.0)
         max_goals = st.slider("比分矩阵最大进球", 5, 12, 8)
         allow_manual_teams = st.checkbox("手动输入队伍", value=False)
-        use_strength_correction = st.checkbox("跨赛区强度校正", value=True, help="仅世界杯模式生效。双方赛区不同时，按本地强度评分小幅修正预期进球。")
+        use_strength_correction = st.checkbox("跨赛区强度校正", value=True, help="仅男足世界杯模式生效。双方赛区不同时，按本地强度评分小幅修正预期进球。")
         strength_intensity = st.slider("强度校正力度", 0.0, 1.0, 0.60, 0.05)
         market_weight = st.slider("赔率融合权重（Market blend weight）", 0.0, 1.0, 0.30, 0.05)
 
@@ -1470,9 +1484,10 @@ def main() -> None:
         return
 
     training_matches = optimize_training_matches(matches, selected_competition, home_team, away_team, qualifier_fast_mode)
-    if qualifier_fast_mode and selected_competition == "WorldCup":
-        original_qualifiers = int((matches["competition"].astype(str) == "WorldCupQualifiers").sum())
-        used_qualifiers = int((training_matches["competition"].astype(str) == "WorldCupQualifiers").sum())
+    qualifier_code = QUALIFIER_COMPETITIONS.get(selected_competition)
+    if qualifier_fast_mode and qualifier_code:
+        original_qualifiers = int((matches["competition"].astype(str) == qualifier_code).sum())
+        used_qualifiers = int((training_matches["competition"].astype(str) == qualifier_code).sum())
         if original_qualifiers and used_qualifiers < original_qualifiers:
             st.caption(f"训练快速模式：本次只加入 {used_qualifiers}/{original_qualifiers} 场与当前双方相关的预选赛，提升训练速度。")
     elif qualifier_fast_mode and selected_competition in {"EPL", "CSL"}:
@@ -1480,22 +1495,22 @@ def main() -> None:
         used_rows = len(filter_competition(training_matches, selected_competition))
         if used_rows < original_rows:
             st.caption(f"训练快速模式：本次使用最近 {used_rows}/{original_rows} 场联赛比赛。")
-    elif selected_competition == "WorldCup" and int((matches["competition"].astype(str) == "WorldCupQualifiers").sum()) > 300:
+    elif qualifier_code and int((matches["competition"].astype(str) == qualifier_code).sum()) > 300:
         st.warning("当前包含大量世界杯预选赛数据，关闭快速模式可能训练很久或不收敛；建议开启“训练快速模式”。")
 
     try:
         with st.spinner("正在训练模型，首次加载较慢；后续相同数据和参数会使用缓存。"):
             trained = cached_train_model(matches_cache_payload(training_matches), selected_competition, half_life_days)
     except Exception as exc:
-        qualifier_count = int((matches["competition"].astype(str) == "WorldCupQualifiers").sum()) if "competition" in matches.columns else 0
+        qualifier_count = int((matches["competition"].astype(str) == qualifier_code).sum()) if qualifier_code and "competition" in matches.columns else 0
         if not qualifier_fast_mode:
             fallback_matches = optimize_training_matches(matches, selected_competition, home_team, away_team, True)
             try:
                 with st.spinner("全量训练失败，正在自动改用快速模式重试。"):
                     trained = cached_train_model(matches_cache_payload(fallback_matches), selected_competition, half_life_days)
                 training_matches = fallback_matches
-                if selected_competition == "WorldCup" and qualifier_count:
-                    used_qualifiers = int((training_matches["competition"].astype(str) == "WorldCupQualifiers").sum())
+                if qualifier_code and qualifier_count:
+                    used_qualifiers = int((training_matches["competition"].astype(str) == qualifier_code).sum())
                     st.warning(f"全量训练失败，已自动改用快速模式：本次使用 {used_qualifiers}/{qualifier_count} 场相关预选赛。原始错误：{exc}")
                 else:
                     st.warning(f"全量训练失败，已自动改用快速模式。原始错误：{exc}")

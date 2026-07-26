@@ -57,10 +57,10 @@ def default_entry_values(source: DataSource) -> dict[str, object]:
         season = parts[1]
     stage = ""
     round_name = ""
-    if source.competition == "WorldCup":
+    if source.competition in {"WorldCup", "WomenWorldCup"}:
         stage = "Group"
         round_name = "Group Stage"
-    elif source.competition == "WorldCupQualifiers":
+    elif source.competition in {"WorldCupQualifiers", "WomenWorldCupQualifiers"}:
         stage = "Qualification"
         round_name = "Qualification"
     elif source.competition in {"EPL", "CSL"}:

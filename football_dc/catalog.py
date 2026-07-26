@@ -22,6 +22,8 @@ class DataSource:
 SOURCE_GROUPS = {
     "WorldCup": "世界杯",
     "WorldCupQualifiers": "世界杯",
+    "WomenWorldCup": "女足世界杯",
+    "WomenWorldCupQualifiers": "女足世界杯",
     "EPL": "英超",
     "CSL": "中超",
 }
@@ -31,6 +33,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 DATA_DIRECTORIES = {
     "worldcup": PROJECT_ROOT / "data/worldcup",
+    "women_worldcup": PROJECT_ROOT / "data/women_worldcup",
     "epl": PROJECT_ROOT / "data/epl",
     "csl": PROJECT_ROOT / "data/csl",
 }
@@ -49,7 +52,7 @@ def source_group(source: DataSource) -> str:
 
 
 def source_short_label(source: DataSource) -> str:
-    for prefix in ("世界杯 ", "英超 ", "中超 "):
+    for prefix in ("世界杯 ", "女足世界杯 ", "英超 ", "中超 "):
         if source.label.startswith(prefix):
             return source.label.removeprefix(prefix)
     return source.label
@@ -101,6 +104,14 @@ def source_from_path(path: Path) -> DataSource | None:
             season = name.removeprefix("qualifiers_").removesuffix("_cycle_all")
             return DataSource(f"worldcup_{name}", f"世界杯 {season} 预选赛周期", "WorldCupQualifiers", path)
         return None
+    if parent == "women_worldcup":
+        if name.startswith("finals_"):
+            season = name.removeprefix("finals_")
+            return DataSource(f"women_worldcup_{name}", f"女足世界杯 {season} 正赛", "WomenWorldCup", path)
+        if name.startswith("qualifiers_") and name.endswith("_cycle_all"):
+            season = name.removeprefix("qualifiers_").removesuffix("_cycle_all")
+            return DataSource(f"women_worldcup_{name}", f"女足世界杯 {season} 预选赛周期", "WomenWorldCupQualifiers", path)
+        return None
     if parent == "epl" and name.startswith("epl_"):
         season = name.removeprefix("epl_").replace("_", "-")
         return DataSource(name, f"英超 {season}", "EPL", path)
@@ -111,8 +122,8 @@ def source_from_path(path: Path) -> DataSource | None:
 
 
 def source_sort_key(source: DataSource) -> tuple:
-    group_rank = {"WorldCup": 0, "WorldCupQualifiers": 0, "EPL": 1, "CSL": 2}.get(source.competition, 9)
-    qualifier_rank = 1 if source.competition == "WorldCupQualifiers" else 0
+    group_rank = {"WorldCup": 0, "WorldCupQualifiers": 0, "WomenWorldCup": 1, "WomenWorldCupQualifiers": 1, "EPL": 2, "CSL": 3}.get(source.competition, 9)
+    qualifier_rank = 1 if source.competition in {"WorldCupQualifiers", "WomenWorldCupQualifiers"} else 0
     return (group_rank, source_group(source), source.label, qualifier_rank)
 
 

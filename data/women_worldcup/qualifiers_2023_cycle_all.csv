@@ -1,0 +1,88 @@
+competition,season,date,home_team,away_team,home_goals,away_goals,neutral_site,stage,round,score_basis,decided_by_penalties,winner,notes
+WomenWorldCupQualifiers,2023,2022-01-20,China PR,Chinese Taipei,4,0,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-20,India,Iran,0,0,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-21,Japan,Myanmar,5,0,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-21,South Korea,Vietnam,3,0,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-21,Australia,Indonesia,18,0,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-21,Thailand,Philippines,0,1,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-23,Iran,China PR,0,7,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-23,Chinese Taipei,India,0,0,true,Qualification,AFC Women's Asian Cup group stage,VOID,false,,India withdrew after COVID-19 cases; retained for record and excluded from FT90 training
+WomenWorldCupQualifiers,2023,2022-01-24,Myanmar,South Korea,0,2,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-24,Vietnam,Japan,0,3,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-24,Indonesia,Thailand,0,4,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-24,Philippines,Australia,0,4,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-26,Chinese Taipei,Iran,5,0,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-27,Japan,South Korea,1,1,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-27,Vietnam,Myanmar,2,2,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-27,Australia,Thailand,2,1,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-27,Philippines,Indonesia,6,0,true,Qualification,AFC Women's Asian Cup group stage,FT90,false,,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-30,China PR,Vietnam,3,1,true,Qualification,AFC Women's Asian Cup quarterfinals,FT90,false,China PR,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-30,Japan,Thailand,7,0,true,Qualification,AFC Women's Asian Cup quarterfinals,FT90,false,Japan,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-30,Australia,South Korea,0,1,true,Qualification,AFC Women's Asian Cup quarterfinals,FT90,false,South Korea,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-01-30,Chinese Taipei,Philippines,1,1,true,Qualification,AFC Women's Asian Cup quarterfinals,FT90,true,Philippines,Philippines advanced on penalties
+WomenWorldCupQualifiers,2023,2022-02-02,China PR,Japan,1,1,true,Qualification,AFC Women's Asian Cup semifinals,FT90,true,China PR,China PR advanced on penalties
+WomenWorldCupQualifiers,2023,2022-02-03,South Korea,Philippines,2,0,true,Qualification,AFC Women's Asian Cup semifinals,FT90,false,South Korea,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-02-06,China PR,South Korea,3,2,true,Qualification,AFC Women's Asian Cup final,FT90,false,China PR,2023 Women's World Cup AFC qualification path
+WomenWorldCupQualifiers,2023,2022-02-02,Thailand,Vietnam,0,2,true,Qualification,AFC Women's Asian Cup play-off,FT90,false,Vietnam,2023 Women's World Cup AFC play-off
+WomenWorldCupQualifiers,2023,2022-02-04,Chinese Taipei,Thailand,3,0,true,Qualification,AFC Women's Asian Cup play-off,FT90,false,Chinese Taipei,2023 Women's World Cup AFC play-off
+WomenWorldCupQualifiers,2023,2022-02-06,Vietnam,Chinese Taipei,2,1,true,Qualification,AFC Women's Asian Cup play-off,FT90,false,Vietnam,2023 Women's World Cup AFC play-off
+WomenWorldCupQualifiers,2023,2022-07-04,United States,Haiti,3,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-04,Mexico,Jamaica,0,1,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-05,Costa Rica,Panama,3,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-05,Canada,Trinidad and Tobago,6,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-07,United States,Jamaica,5,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-07,Haiti,Mexico,3,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-08,Trinidad and Tobago,Costa Rica,0,4,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-08,Panama,Canada,0,1,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-11,Jamaica,Haiti,4,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-11,United States,Mexico,1,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-11,Canada,Costa Rica,2,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-11,Panama,Trinidad and Tobago,1,0,true,Qualification,Concacaf W Championship group stage,FT90,false,,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-14,United States,Costa Rica,3,0,true,Qualification,Concacaf W Championship semifinals,FT90,false,United States,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-14,Canada,Jamaica,3,0,true,Qualification,Concacaf W Championship semifinals,FT90,false,Canada,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-18,United States,Canada,1,0,true,Qualification,Concacaf W Championship final,FT90,false,United States,2023 Women's World Cup Concacaf qualification path
+WomenWorldCupQualifiers,2023,2022-07-08,Argentina,Brazil,0,4,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-08,Uruguay,Venezuela,0,1,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-09,Paraguay,Colombia,2,4,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-09,Bolivia,Ecuador,1,6,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-11,Peru,Argentina,0,4,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-11,Brazil,Uruguay,3,0,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-12,Chile,Paraguay,3,2,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-12,Colombia,Bolivia,3,0,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-15,Argentina,Uruguay,5,0,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-15,Venezuela,Peru,2,0,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-17,Ecuador,Chile,1,2,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-17,Paraguay,Bolivia,2,0,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-18,Venezuela,Brazil,0,4,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-18,Peru,Uruguay,0,6,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-20,Colombia,Chile,4,0,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-20,Ecuador,Paraguay,1,2,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-21,Brazil,Peru,6,0,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-21,Venezuela,Argentina,0,1,true,Qualification,Copa America Femenina group stage,FT90,false,,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-24,Chile,Venezuela,1,1,true,Qualification,Copa America Femenina fifth place,FT90,true,Chile,Chile advanced on penalties
+WomenWorldCupQualifiers,2023,2022-07-25,Brazil,Paraguay,2,0,true,Qualification,Copa America Femenina semifinals,FT90,false,Brazil,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-25,Colombia,Argentina,1,0,true,Qualification,Copa America Femenina semifinals,FT90,false,Colombia,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-29,Argentina,Paraguay,3,1,true,Qualification,Copa America Femenina third place,FT90,false,Argentina,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-30,Brazil,Colombia,1,0,true,Qualification,Copa America Femenina final,FT90,false,Brazil,2023 Women's World Cup CONMEBOL qualification path
+WomenWorldCupQualifiers,2023,2022-07-13,Samoa,Tonga,2,0,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-13,Papua New Guinea,Vanuatu,3,1,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-14,Fiji,Solomon Islands,1,1,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-14,Tahiti,Cook Islands,0,1,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-16,Tonga,Vanuatu,0,1,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-16,Samoa,Papua New Guinea,0,3,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-17,Cook Islands,Solomon Islands,1,0,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-17,Fiji,Tahiti,1,1,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-20,Samoa,Vanuatu,0,2,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-20,Papua New Guinea,Tonga,4,0,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-21,Solomon Islands,Tahiti,0,0,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-21,Cook Islands,Fiji,0,2,true,Qualification,OFC Women's Nations Cup group stage,FT90,false,,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-23,Papua New Guinea,Cook Islands,3,0,true,Qualification,OFC Women's Nations Cup semifinals,FT90,false,Papua New Guinea,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-23,Fiji,Samoa,3,1,true,Qualification,OFC Women's Nations Cup semifinals,FT90,false,Fiji,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2022-07-27,Papua New Guinea,Fiji,2,1,true,Qualification,OFC Women's Nations Cup final,FT90,false,Papua New Guinea,2023 Women's World Cup OFC qualification path
+WomenWorldCupQualifiers,2023,2023-02-18,Cameroon,Thailand,2,0,true,Qualification,Inter-confederation play-offs,FT90,false,Cameroon,2023 Women's World Cup play-off tournament
+WomenWorldCupQualifiers,2023,2023-02-18,Senegal,Haiti,0,4,true,Qualification,Inter-confederation play-offs,FT90,false,Haiti,2023 Women's World Cup play-off tournament
+WomenWorldCupQualifiers,2023,2023-02-19,Chinese Taipei,Paraguay,2,2,true,Qualification,Inter-confederation play-offs,FT90,true,Paraguay,Paraguay advanced on penalties
+WomenWorldCupQualifiers,2023,2023-02-19,Papua New Guinea,Panama,0,2,true,Qualification,Inter-confederation play-offs,FT90,false,Panama,2023 Women's World Cup play-off tournament
+WomenWorldCupQualifiers,2023,2023-02-22,Portugal,Cameroon,2,1,true,Qualification,Inter-confederation play-offs,FT90,false,Portugal,Portugal qualified for 2023 Women's World Cup
+WomenWorldCupQualifiers,2023,2023-02-22,Chile,Haiti,1,2,true,Qualification,Inter-confederation play-offs,FT90,false,Haiti,Haiti qualified for 2023 Women's World Cup
+WomenWorldCupQualifiers,2023,2023-02-23,Paraguay,Panama,0,1,true,Qualification,Inter-confederation play-offs,FT90,false,Panama,Panama qualified for 2023 Women's World Cup

@@ -21,12 +21,18 @@ class CatalogOddsAdjustmentsTest(unittest.TestCase):
 
         self.assertIn("世界杯 2026 正赛", labels)
         self.assertIn("世界杯 2026 预选赛周期", labels)
+        self.assertIn("女足世界杯 2023 正赛", labels)
+        self.assertIn("女足世界杯 2023 预选赛周期", labels)
+        self.assertIn("女足世界杯 2027 预选赛周期", labels)
         self.assertIn("中超 2025", labels)
         self.assertIn("中超 2026", labels)
         self.assertIn("EPL", competitions)
         self.assertIn("CSL", competitions)
         self.assertIn("WorldCupQualifiers", competitions)
+        self.assertIn("WomenWorldCup", competitions)
+        self.assertIn("WomenWorldCupQualifiers", competitions)
         self.assertIn("CSL", COMPETITIONS)
+        self.assertIn("WomenWorldCup", COMPETITIONS)
 
     def test_catalog_loads_worldcup_finals(self):
         matches, loaded = load_catalog_sources(["世界杯 2026 正赛"])
@@ -52,6 +58,23 @@ class CatalogOddsAdjustmentsTest(unittest.TestCase):
         self.assertEqual(matches["competition"].unique().tolist(), ["WorldCupQualifiers"])
         self.assertIn("FT90", matches["score_basis"].unique().tolist())
         self.assertIn("data/worldcup/qualifiers_2026_cycle_all.csv", loaded)
+
+    def test_catalog_loads_women_worldcup_sources(self):
+        finals, finals_loaded = load_catalog_sources(["女足世界杯 2023 正赛"])
+        previous_qualifiers, previous_qualifiers_loaded = load_catalog_sources(["女足世界杯 2023 预选赛周期"])
+        qualifiers, qualifiers_loaded = load_catalog_sources(["女足世界杯 2027 预选赛周期"])
+
+        self.assertEqual(len(finals), 64)
+        self.assertEqual(finals["competition"].unique().tolist(), ["WomenWorldCup"])
+        self.assertEqual(len(previous_qualifiers), 87)
+        self.assertEqual(previous_qualifiers["competition"].unique().tolist(), ["WomenWorldCupQualifiers"])
+        self.assertIn("VOID", previous_qualifiers["score_basis"].unique().tolist())
+        self.assertEqual(len(qualifiers), 231)
+        self.assertEqual(qualifiers["competition"].unique().tolist(), ["WomenWorldCupQualifiers"])
+        self.assertEqual(qualifiers["date"].max().date().isoformat(), "2026-06-09")
+        self.assertIn("data/women_worldcup/finals_2023.csv", finals_loaded)
+        self.assertIn("data/women_worldcup/qualifiers_2023_cycle_all.csv", previous_qualifiers_loaded)
+        self.assertIn("data/women_worldcup/qualifiers_2027_cycle_all.csv", qualifiers_loaded)
 
     def test_odds_csv_matches_fixture(self):
         odds = normalize_odds(

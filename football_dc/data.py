@@ -49,6 +49,12 @@ TEAM_NAME_ALIASES = {
     "Cape Verde": "Cabo Verde",
     "Curacao": "Curaçao",
     "Czech Republic": "Czechia",
+    "IR Iran": "Iran",
+    "Korea DPR": "North Korea",
+    "Korea Republic": "South Korea",
+    "Türki̇ye": "Turkey",
+    "Türkiye": "Turkey",
+    "USA": "United States",
 }
 
 SCORE_BASIS_MAP = {
@@ -65,6 +71,7 @@ SCORE_BASIS_MAP = {
 
 TRAINING_COMPETITION_GROUPS = {
     "WorldCup": ["WorldCup", "WorldCupQualifiers"],
+    "WomenWorldCup": ["WomenWorldCup", "WomenWorldCupQualifiers"],
 }
 
 
@@ -80,6 +87,8 @@ COMPETITIONS: Dict[str, CompetitionConfig] = {
     "CSL": CompetitionConfig(code="CSL", label="中超", default_neutral_site=False),
     "WorldCup": CompetitionConfig(code="WorldCup", label="世界杯", default_neutral_site=True),
     "WorldCupQualifiers": CompetitionConfig(code="WorldCupQualifiers", label="世界杯预选赛", default_neutral_site=False),
+    "WomenWorldCup": CompetitionConfig(code="WomenWorldCup", label="女足世界杯", default_neutral_site=True),
+    "WomenWorldCupQualifiers": CompetitionConfig(code="WomenWorldCupQualifiers", label="女足世界杯预选赛", default_neutral_site=False),
 }
 
 
@@ -153,13 +162,13 @@ def infer_match_importance(row: pd.Series) -> float:
     stage = str(row.get("stage", "")).strip().lower()
     round_name = str(row.get("round", "")).strip().lower()
 
-    if competition == "WorldCup":
+    if competition in {"WorldCup", "WomenWorldCup"}:
         if "knockout" in stage or round_name in {"round of 32", "round of 16", "quarterfinals", "semifinals", "final"}:
             return 1.0
         if "group" in stage or round_name == "group stage":
             return 0.95
         return 0.9
-    if competition == "WorldCupQualifiers":
+    if competition in {"WorldCupQualifiers", "WomenWorldCupQualifiers"}:
         return 0.75
     if competition in {"EPL", "CSL"}:
         return 0.7

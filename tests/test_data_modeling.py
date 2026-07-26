@@ -173,6 +173,25 @@ class DataModelingTest(unittest.TestCase):
         self.assertEqual(weighted.loc[weighted["competition"] == "WorldCup", "match_weight"].iloc[0], 1.0)
         self.assertEqual(weighted.loc[weighted["competition"] == "WorldCupQualifiers", "match_weight"].iloc[0], 0.45)
 
+    def test_women_worldcup_groups_finals_and_qualifiers(self):
+        raw = pd.DataFrame(
+            [
+                ["WomenWorldCup", "2023", "2023-07-20", "New Zealand", "Norway", 1, 0, "true", "Group", "Group Stage", "FT90"],
+                ["WomenWorldCupQualifiers", "2027", "2026-03-03", "Spain", "Iceland", 3, 0, "false", "Qualification", "UEFA league stage", "FT90"],
+                ["WorldCup", "2026", "2026-06-11", "Spain", "Austria", 2, 0, "true", "Group", "Group Stage", "FT90"],
+            ],
+            columns=["competition", "season", "date", "home_team", "away_team", "home_goals", "away_goals", "neutral_site", "stage", "round", "score_basis"],
+        )
+        matches = normalize_matches(raw)
+
+        grouped = filter_competition(matches, "WomenWorldCup")
+        weighted = apply_training_match_weights(grouped, "WomenWorldCup")
+
+        self.assertEqual(set(grouped["competition"]), {"WomenWorldCup", "WomenWorldCupQualifiers"})
+        self.assertEqual(len(grouped), 2)
+        self.assertEqual(weighted.loc[weighted["competition"] == "WomenWorldCup", "match_weight"].iloc[0], 1.0)
+        self.assertEqual(weighted.loc[weighted["competition"] == "WomenWorldCupQualifiers", "match_weight"].iloc[0], 0.45)
+
     def test_team_aliases_are_normalized(self):
         raw = pd.DataFrame(
             [
