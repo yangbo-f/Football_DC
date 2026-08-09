@@ -24,6 +24,8 @@ class CatalogOddsAdjustmentsTest(unittest.TestCase):
         self.assertIn("女足世界杯 2023 正赛", labels)
         self.assertIn("女足世界杯 2023 预选赛周期", labels)
         self.assertIn("女足世界杯 2027 预选赛周期", labels)
+        self.assertIn("欧冠 2025-2026 正赛", labels)
+        self.assertIn("欧冠 2025-2026 预选赛", labels)
         self.assertIn("中超 2025", labels)
         self.assertIn("中超 2026", labels)
         self.assertIn("EPL", competitions)
@@ -31,8 +33,11 @@ class CatalogOddsAdjustmentsTest(unittest.TestCase):
         self.assertIn("WorldCupQualifiers", competitions)
         self.assertIn("WomenWorldCup", competitions)
         self.assertIn("WomenWorldCupQualifiers", competitions)
+        self.assertIn("ChampionsLeague", competitions)
+        self.assertIn("ChampionsLeagueQualifiers", competitions)
         self.assertIn("CSL", COMPETITIONS)
         self.assertIn("WomenWorldCup", COMPETITIONS)
+        self.assertIn("ChampionsLeague", COMPETITIONS)
 
     def test_catalog_loads_worldcup_finals(self):
         matches, loaded = load_catalog_sources(["世界杯 2026 正赛"])
@@ -75,6 +80,19 @@ class CatalogOddsAdjustmentsTest(unittest.TestCase):
         self.assertIn("data/women_worldcup/finals_2023.csv", finals_loaded)
         self.assertIn("data/women_worldcup/qualifiers_2023_cycle_all.csv", previous_qualifiers_loaded)
         self.assertIn("data/women_worldcup/qualifiers_2027_cycle_all.csv", qualifiers_loaded)
+
+    def test_catalog_loads_champions_league_sources(self):
+        main, main_loaded = load_catalog_sources(["欧冠 2025-2026 正赛"])
+        qualifiers, qualifiers_loaded = load_catalog_sources(["欧冠 2025-2026 预选赛"])
+
+        self.assertEqual(len(main), 189)
+        self.assertEqual(main["competition"].unique().tolist(), ["ChampionsLeague"])
+        self.assertIn("AET", main["score_basis"].unique().tolist())
+        self.assertEqual(len(qualifiers), 92)
+        self.assertEqual(qualifiers["competition"].unique().tolist(), ["ChampionsLeagueQualifiers"])
+        self.assertIn("AET", qualifiers["score_basis"].unique().tolist())
+        self.assertIn("data/champions_league/main_2025_2026.csv", main_loaded)
+        self.assertIn("data/champions_league/qualifiers_2025_2026.csv", qualifiers_loaded)
 
     def test_odds_csv_matches_fixture(self):
         odds = normalize_odds(

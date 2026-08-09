@@ -120,6 +120,7 @@ def cached_train_model(matches_payload: str, competition: str, half_life_days: f
 QUALIFIER_COMPETITIONS = {
     "WorldCup": "WorldCupQualifiers",
     "WomenWorldCup": "WomenWorldCupQualifiers",
+    "ChampionsLeague": "ChampionsLeagueQualifiers",
 }
 
 
@@ -800,6 +801,8 @@ def default_prediction_date(competition: str) -> date:
         return date(2026, 7, 3)
     if competition == "WomenWorldCup":
         return date(2027, 6, 24)
+    if competition == "ChampionsLeague":
+        return date(2026, 5, 30)
     return date(2026, 7, 1)
 
 
@@ -817,6 +820,9 @@ def selectable_competitions(matches: pd.DataFrame) -> list[str]:
     if "WomenWorldCupQualifiers" in competitions:
         competitions.add("WomenWorldCup")
         competitions.discard("WomenWorldCupQualifiers")
+    if "ChampionsLeagueQualifiers" in competitions:
+        competitions.add("ChampionsLeague")
+        competitions.discard("ChampionsLeagueQualifiers")
     return sorted(competitions)
 
 
@@ -828,6 +834,8 @@ def competition_display_name(code: str) -> str:
         return "世界杯（正赛 + 预选赛周期）"
     if code == "WomenWorldCup":
         return "女足世界杯（正赛 + 预选赛周期）"
+    if code == "ChampionsLeague":
+        return "欧冠（正赛 + 预选赛）"
     return config.label
 
 
@@ -940,7 +948,7 @@ def render_app_header(mode: str) -> None:
 def source_group_summary_from_keys(keys: set[str], data_sources=None) -> str:
     sources = data_sources or discover_data_sources()
     groups = []
-    for group in ["世界杯", "女足世界杯", "英超", "中超"]:
+    for group in ["世界杯", "女足世界杯", "欧冠", "英超", "中超"]:
         if any(source.key in keys and source_group(source) == group for source in sources):
             groups.append(group)
     return "+".join(groups) if groups else "未选数据"
@@ -1087,8 +1095,8 @@ def render_adjustment_status(base_prediction, adjusted_prediction, note: str, ho
 
 
 def model_scope_note(selected_competition: str) -> None:
-    if selected_competition in {"WorldCup", "WomenWorldCup"}:
-        st.caption(f"模型口径：{competition_display_name(selected_competition)}可合并正赛与预选赛周期训练；输出为 90 分钟概率，不预测点球或晋级。")
+    if selected_competition in {"WorldCup", "WomenWorldCup", "ChampionsLeague"}:
+        st.caption(f"模型口径：{competition_display_name(selected_competition)}可合并正赛与预选赛训练；输出为 90 分钟概率，不预测点球或晋级。")
     else:
         st.caption("模型口径：历史比分训练；赔率和人工修正只影响本场预测展示。")
 
@@ -1246,7 +1254,7 @@ def render_source_selector() -> list[str]:
         default_checked = source.key in persisted_keys if has_persisted_sources else source.label in defaults
         if bool(st.session_state.get(state_key, default_checked)):
             selected_group_names.add(source_group(source))
-    group_order = ["世界杯", "女足世界杯", "英超", "中超"]
+    group_order = ["世界杯", "女足世界杯", "欧冠", "英超", "中超"]
     for group in group_order:
         sources = [source for source in data_sources if source_group(source) == group]
         if not sources:
@@ -1413,7 +1421,7 @@ def main() -> None:
         qualifier_fast_mode = st.checkbox(
             "训练快速模式",
             value=True,
-            help="世界杯/女足世界杯：只加入当前双方相关的预选赛。英超/中超：数据过多时保留最近比赛。用于避免大数据量训练卡顿或不收敛。",
+            help="世界杯/女足世界杯/欧冠：只加入当前双方相关的预选赛。英超/中超：数据过多时保留最近比赛。用于避免大数据量训练卡顿或不收敛。",
         )
         uploaded_files = st.file_uploader("上传比赛 CSV", type=["csv"], accept_multiple_files=True)
         uploaded_odds_files = st.file_uploader("上传赔率 CSV", type=["csv"], accept_multiple_files=True)

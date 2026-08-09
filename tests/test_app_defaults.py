@@ -47,11 +47,12 @@ class AppDefaultsTest(unittest.TestCase):
         self.assertIn("17.3%", html)
 
     def test_worldcup_qualifiers_are_grouped_under_worldcup(self):
-        matches = pd.DataFrame({"competition": ["WorldCupQualifiers", "WomenWorldCupQualifiers"]})
+        matches = pd.DataFrame({"competition": ["WorldCupQualifiers", "WomenWorldCupQualifiers", "ChampionsLeagueQualifiers"]})
 
-        self.assertEqual(app.selectable_competitions(matches), ["WomenWorldCup", "WorldCup"])
+        self.assertEqual(app.selectable_competitions(matches), ["ChampionsLeague", "WomenWorldCup", "WorldCup"])
         self.assertEqual(app.competition_display_name("WorldCup"), "世界杯（正赛 + 预选赛周期）")
         self.assertEqual(app.competition_display_name("WomenWorldCup"), "女足世界杯（正赛 + 预选赛周期）")
+        self.assertEqual(app.competition_display_name("ChampionsLeague"), "欧冠（正赛 + 预选赛）")
 
     def test_stage_display_helpers_are_chinese(self):
         self.assertEqual(app.stage_display_name("Group"), "小组赛")
@@ -159,6 +160,7 @@ class AppDefaultsTest(unittest.TestCase):
         sources = [
             Source("worldcup_finals_2026", "WorldCup"),
             Source("women_worldcup_finals_2023", "WomenWorldCup"),
+            Source("champions_league_main_2025_2026", "ChampionsLeague"),
             Source("csl_2026", "CSL"),
             Source("epl_2025_2026", "EPL"),
         ]
@@ -166,6 +168,7 @@ class AppDefaultsTest(unittest.TestCase):
         self.assertEqual(app.source_group_summary_from_keys({"csl_2026"}, sources), "中超")
         self.assertEqual(app.source_group_summary_from_keys({"worldcup_finals_2026", "csl_2026"}, sources), "世界杯+中超")
         self.assertEqual(app.source_group_summary_from_keys({"women_worldcup_finals_2023"}, sources), "女足世界杯")
+        self.assertEqual(app.source_group_summary_from_keys({"champions_league_main_2025_2026"}, sources), "欧冠")
         self.assertEqual(app.source_group_summary_from_keys(set(), sources), "未选数据")
 
     def test_match_entry_success_message_is_explicit(self):

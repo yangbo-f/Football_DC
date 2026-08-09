@@ -1,0 +1,93 @@
+competition,season,date,home_team,away_team,home_goals,away_goals,neutral_site,stage,round,score_basis,decided_by_penalties,winner,notes
+ChampionsLeagueQualifiers,2025-2026,2025-07-08,KuPS Kuopio,Milsami,1,0,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-08,The New Saints,Shkëndija,0,0,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-08,Iberia,Malmö,1,3,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-08,Levadia Tallinn,RFS,0,1,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-08,Drita,Differdange,1,0,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-08,Víkingur,Lincoln Red Imps,2,3,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-08,Egnatia,Breidablik,1,0,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-08,Virtus,Zrinjski,0,2,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-09,Olimpija,Kairat Almaty,1,1,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-09,Noah,Budućnost,1,0,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-09,Žalgiris,Hamrun Spartans,2,0,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-09,Shelbourne,Linfield,1,0,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-09,FCSB,Inter Escaldes,3,1,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-09,Ludogorets,Dinamo-Minsk,1,0,False,Qualification,First qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-15,Hamrun Spartans,Žalgiris,2,0,False,Qualification,First qualifying round,AET,True,Hamrun Spartans,Hamrun Spartans advanced 11-10 on penalties; AET score excluded from FT90 training
+ChampionsLeagueQualifiers,2025-2026,2025-07-15,Milsami,KuPS Kuopio,0,0,False,Qualification,First qualifying round,FT90,False,KuPS Kuopio,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-15,Shkëndija,The New Saints,2,1,False,Qualification,First qualifying round,AET,False,Shkëndija,AET score excluded from FT90 training
+ChampionsLeagueQualifiers,2025-2026,2025-07-15,Malmö,Iberia,3,1,False,Qualification,First qualifying round,FT90,False,Malmö,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-15,RFS,Levadia Tallinn,1,0,False,Qualification,First qualifying round,FT90,False,RFS,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-15,Differdange,Drita,2,3,False,Qualification,First qualifying round,FT90,False,Drita,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-15,Lincoln Red Imps,Víkingur,1,0,False,Qualification,First qualifying round,FT90,False,Lincoln Red Imps,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-15,Breidablik,Egnatia,5,0,False,Qualification,First qualifying round,FT90,False,Breidablik,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-16,Linfield,Shelbourne,1,1,False,Qualification,First qualifying round,FT90,False,Shelbourne,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-16,Inter Escaldes,FCSB,2,1,False,Qualification,First qualifying round,FT90,False,FCSB,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-16,Zrinjski,Virtus,2,1,False,Qualification,First qualifying round,FT90,False,Zrinjski,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-16,Kairat Almaty,Olimpija,2,0,False,Qualification,First qualifying round,FT90,False,Kairat Almaty,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-16,Budućnost,Noah,2,2,False,Qualification,First qualifying round,FT90,False,Noah,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-16,Dinamo-Minsk,Ludogorets,2,2,False,Qualification,First qualifying round,AET,False,Ludogorets,AET score excluded from FT90 training
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,RFS,Malmö,1,4,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Hamrun Spartans,Dynamo Kyiv,0,3,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Pafos,Maccabi Tel Aviv,1,1,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Lincoln Red Imps,Crvena Zvezda,0,1,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Noah,Ferencváros,1,2,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Lech Poznań,Breidablik,7,1,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Copenhagen,Drita,2,0,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Rijeka,Ludogorets,0,0,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Shkëndija,FCSB,1,0,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-22,Slovan Bratislava,Zrinjski,4,0,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-23,Shelbourne,Qarabağ,0,3,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-23,KuPS Kuopio,Kairat Almaty,2,0,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-23,Brann,Salzburg,1,4,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-23,Viktoria Plzeň,Servette,0,1,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-23,Rangers,Panathinaikos,2,0,False,Qualification,Second qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-29,Kairat Almaty,KuPS Kuopio,3,0,False,Qualification,Second qualifying round,FT90,False,Kairat Almaty,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-29,Dynamo Kyiv,Hamrun Spartans,3,0,False,Qualification,Second qualifying round,FT90,False,Dynamo Kyiv,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-29,Drita,Copenhagen,0,1,False,Qualification,Second qualifying round,FT90,False,Copenhagen,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-29,Crvena Zvezda,Lincoln Red Imps,5,1,False,Qualification,Second qualifying round,FT90,False,Crvena Zvezda,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-29,Zrinjski,Slovan Bratislava,2,2,False,Qualification,Second qualifying round,FT90,False,Slovan Bratislava,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-29,Qarabağ,Shelbourne,1,0,False,Qualification,Second qualifying round,FT90,False,Qarabağ,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,Malmö,RFS,1,0,False,Qualification,Second qualifying round,FT90,False,Malmö,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,Ludogorets,Rijeka,3,1,False,Qualification,Second qualifying round,AET,False,Ludogorets,AET score excluded from FT90 training
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,FCSB,Shkëndija,1,2,False,Qualification,Second qualifying round,FT90,False,Shkëndija,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,Maccabi Tel Aviv,Pafos,0,1,False,Qualification,Second qualifying round,FT90,False,Pafos,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,Ferencváros,Noah,4,3,False,Qualification,Second qualifying round,FT90,False,Ferencváros,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,Breidablik,Lech Poznań,0,1,False,Qualification,Second qualifying round,FT90,False,Lech Poznań,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,Panathinaikos,Rangers,1,1,False,Qualification,Second qualifying round,FT90,False,Rangers,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,Salzburg,Brann,1,1,False,Qualification,Second qualifying round,FT90,False,Salzburg,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-07-30,Servette,Viktoria Plzeň,1,3,False,Qualification,Second qualifying round,FT90,False,Viktoria Plzeň,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-05,Malmö,Copenhagen,0,0,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-05,Dynamo Kyiv,Pafos,0,1,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-05,Shkëndija,Qarabağ,0,1,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-05,Kairat Almaty,Slovan Bratislava,1,0,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-05,Ludogorets,Ferencváros,0,0,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-05,Lech Poznań,Crvena Zvezda,1,3,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-05,Rangers,Viktoria Plzeň,3,0,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-05,Salzburg,Club Brugge,0,1,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-06,Nice,Benfica,0,2,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-06,Feyenoord,Fenerbahçe,2,1,False,Qualification,Third qualifying round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Qarabağ,Shkëndija,5,1,False,Qualification,Third qualifying round,FT90,False,Qarabağ,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Copenhagen,Malmö,5,0,False,Qualification,Third qualifying round,FT90,False,Copenhagen,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Pafos,Dynamo Kyiv,2,0,False,Qualification,Third qualifying round,FT90,False,Pafos,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Slovan Bratislava,Kairat Almaty,1,0,False,Qualification,Third qualifying round,AET,True,Kairat Almaty,Kairat Almaty advanced 4-3 on penalties; AET score excluded from FT90 training
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Ferencváros,Ludogorets,3,0,False,Qualification,Third qualifying round,FT90,False,Ferencváros,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Crvena Zvezda,Lech Poznań,1,1,False,Qualification,Third qualifying round,FT90,False,Crvena Zvezda,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Viktoria Plzeň,Rangers,2,1,False,Qualification,Third qualifying round,FT90,False,Rangers,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Club Brugge,Salzburg,3,2,False,Qualification,Third qualifying round,FT90,False,Club Brugge,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Fenerbahçe,Feyenoord,5,2,False,Qualification,Third qualifying round,FT90,False,Fenerbahçe,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-12,Benfica,Nice,2,0,False,Qualification,Third qualifying round,FT90,False,Benfica,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-19,Ferencváros,Qarabağ,1,3,False,Qualification,Play-off round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-19,Crvena Zvezda,Pafos,1,2,False,Qualification,Play-off round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-19,Rangers,Club Brugge,1,3,False,Qualification,Play-off round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-20,Bodø/Glimt,Sturm Graz,5,0,False,Qualification,Play-off round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-20,Celtic,Kairat Almaty,0,0,False,Qualification,Play-off round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-20,Basel,Copenhagen,1,1,False,Qualification,Play-off round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-20,Fenerbahçe,Benfica,0,0,False,Qualification,Play-off round,FT90,False,,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-26,Pafos,Crvena Zvezda,1,1,False,Qualification,Play-off round,FT90,False,Pafos,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-26,Sturm Graz,Bodø/Glimt,2,1,False,Qualification,Play-off round,FT90,False,Bodø/Glimt,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-26,Kairat Almaty,Celtic,0,0,False,Qualification,Play-off round,AET,True,Kairat Almaty,Kairat Almaty advanced 3-2 on penalties; AET score excluded from FT90 training
+ChampionsLeagueQualifiers,2025-2026,2025-08-27,Qarabağ,Ferencváros,2,3,False,Qualification,Play-off round,FT90,False,Qarabağ,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-27,Copenhagen,Basel,2,0,False,Qualification,Play-off round,FT90,False,Copenhagen,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-27,Benfica,Fenerbahçe,1,0,False,Qualification,Play-off round,FT90,False,Benfica,UEFA qualifying results for 2025/26 Champions League
+ChampionsLeagueQualifiers,2025-2026,2025-08-27,Club Brugge,Rangers,6,0,False,Qualification,Play-off round,FT90,False,Club Brugge,UEFA qualifying results for 2025/26 Champions League

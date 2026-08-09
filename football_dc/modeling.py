@@ -45,6 +45,7 @@ def apply_training_match_weights(matches: pd.DataFrame, competition: str) -> pd.
     qualifier_codes = {
         "WorldCup": "WorldCupQualifiers",
         "WomenWorldCup": "WomenWorldCupQualifiers",
+        "ChampionsLeague": "ChampionsLeagueQualifiers",
     }
     qualifier_code = qualifier_codes.get(competition)
     if qualifier_code and "competition" in weighted.columns:

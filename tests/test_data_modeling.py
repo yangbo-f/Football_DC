@@ -192,11 +192,31 @@ class DataModelingTest(unittest.TestCase):
         self.assertEqual(weighted.loc[weighted["competition"] == "WomenWorldCup", "match_weight"].iloc[0], 1.0)
         self.assertEqual(weighted.loc[weighted["competition"] == "WomenWorldCupQualifiers", "match_weight"].iloc[0], 0.45)
 
+    def test_champions_league_groups_main_and_qualifiers(self):
+        raw = pd.DataFrame(
+            [
+                ["ChampionsLeague", "2025-2026", "2025-09-16", "PSV", "Union Saint-Gilloise", 1, 3, "false", "League", "League Phase", "FT90"],
+                ["ChampionsLeagueQualifiers", "2025-2026", "2025-07-08", "KuPS Kuopio", "Milsami", 1, 0, "false", "Qualification", "First qualifying round", "FT90"],
+                ["EPL", "2025-2026", "2025-08-16", "Arsenal", "Chelsea", 2, 1, "false", "League", "Round 1", "FT90"],
+            ],
+            columns=["competition", "season", "date", "home_team", "away_team", "home_goals", "away_goals", "neutral_site", "stage", "round", "score_basis"],
+        )
+        matches = normalize_matches(raw)
+
+        grouped = filter_competition(matches, "ChampionsLeague")
+        weighted = apply_training_match_weights(grouped, "ChampionsLeague")
+
+        self.assertEqual(set(grouped["competition"]), {"ChampionsLeague", "ChampionsLeagueQualifiers"})
+        self.assertEqual(len(grouped), 2)
+        self.assertEqual(weighted.loc[weighted["competition"] == "ChampionsLeague", "match_weight"].iloc[0], 1.0)
+        self.assertEqual(weighted.loc[weighted["competition"] == "ChampionsLeagueQualifiers", "match_weight"].iloc[0], 0.45)
+
     def test_team_aliases_are_normalized(self):
         raw = pd.DataFrame(
             [
                 ["WorldCup", "2026", "2026-06-11", "Cape Verde", "Curacao", 1, 0, "true", "FT90"],
                 ["WorldCup", "2026", "2026-06-12", "Czech Republic", "Spain", 1, 1, "true", "FT90"],
+                ["ChampionsLeague", "2025-2026", "2025-09-16", "B. Dortmund", "Atleti", 4, 4, "false", "FT90"],
             ],
             columns=["competition", "season", "date", "home_team", "away_team", "home_goals", "away_goals", "neutral_site", "score_basis"],
         )
@@ -206,6 +226,8 @@ class DataModelingTest(unittest.TestCase):
         self.assertIn("Cabo Verde", matches["home_team"].tolist())
         self.assertIn("Curaçao", matches["away_team"].tolist())
         self.assertIn("Czechia", matches["home_team"].tolist())
+        self.assertIn("Borussia Dortmund", matches["home_team"].tolist())
+        self.assertIn("Atlético de Madrid", matches["away_team"].tolist())
         self.assertEqual(normalize_team_name("Cape Verde"), "Cabo Verde")
 
     def test_data_quality_report_flags_problem_rows(self):

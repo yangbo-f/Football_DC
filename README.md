@@ -6,6 +6,7 @@
 
 - 男足世界杯：正赛 + 预选赛周期
 - 女足世界杯：正赛 + 预选赛周期
+- 欧冠：正赛 + 预选赛
 - 英超
 - 中超
 - 手动上传比赛 CSV、赔率 CSV、球队强度 CSV
@@ -14,7 +15,7 @@
 
 ## 项目特点
 
-- **按赛事单独训练**：世界杯、女足世界杯、英超、中超不会混训。
+- **按赛事单独训练**：世界杯、女足世界杯、欧冠、英超、中超不会混训。
 - **Dixon-Coles 基础模型**：拟合球队进攻、防守、主场优势和低比分相关性。
 - **90 分钟口径**：淘汰赛点球和晋级信息只做记录，不进入进球模型。
 - **中文 UI**：球队选择和页面文案尽量中文化，CSV 内部仍保存英文标准名。
@@ -106,6 +107,8 @@ event_date,competition,home_team,away_team,market,selection,line,odds_decimal,bo
 - 世界杯 2026 预选赛周期
 - 女足世界杯 2023 正赛
 - 女足世界杯 2023 预选赛周期
+- 欧冠 2025-2026 正赛
+- 欧冠 2025-2026 预选赛
 - 中超 2026
 - 英超 2025-2026
 
@@ -148,6 +151,10 @@ data/
     csl_2025.csv
     csl_2026.csv
 
+  champions_league/
+    main_2025_2026.csv
+    qualifiers_2025_2026.csv
+
   odds/
     sample_odds.csv
 ```
@@ -162,6 +169,8 @@ data/
 - 女足世界杯预选赛周期：`data/women_worldcup/qualifiers_YYYY_cycle_all.csv`
 - 英超：`data/epl/epl_YYYY_YYYY.csv`
 - 中超：`data/csl/csl_YYYY.csv`
+- 欧冠正赛：`data/champions_league/main_YYYY_YYYY.csv`
+- 欧冠预选赛：`data/champions_league/qualifiers_YYYY_YYYY.csv`
 
 ## 比赛 CSV 格式
 
@@ -188,7 +197,7 @@ CSL,2026,2026-03-06,Chengdu Rongcheng,Shenzhen Peng City,5,1,false,League,Round 
 
 字段说明：
 
-- `competition`：赛事代码，例如 `WorldCup`、`WorldCupQualifiers`、`WomenWorldCup`、`WomenWorldCupQualifiers`、`EPL`、`CSL`
+- `competition`：赛事代码，例如 `WorldCup`、`WorldCupQualifiers`、`WomenWorldCup`、`WomenWorldCupQualifiers`、`ChampionsLeague`、`ChampionsLeagueQualifiers`、`EPL`、`CSL`
 - `season`：赛季或赛事年份
 - `date`：比赛日期，建议 `YYYY-MM-DD`
 - `home_team` / `away_team`：英文标准队名
@@ -228,6 +237,13 @@ CSL,2026,2026-03-06,Chengdu Rongcheng,Shenzhen Peng City,5,1,false,League,Round 
 
 女足 2023 预选赛当前纳入了 AFC、OFC、CONMEBOL、Concacaf、洲际附加赛的关键资格赛阶段。UEFA / CAF 2023 周期全量小组赛暂未强行补齐，后续可继续追加。
 
+### 欧冠
+
+- 欧冠 2025-2026 正赛：189 场
+- 欧冠 2025-2026 预选赛：92 场
+
+欧冠上一届数据包含联赛阶段、淘汰赛附加赛、16 强、1/4 决赛、半决赛、决赛，以及第一轮资格赛至附加赛。标记为 `AET` 的加时比分会保留展示，但默认不进入 Dixon-Coles 90 分钟训练。
+
 ## 模型说明
 
 当前主页面使用 Dixon-Coles 作为基础模型。
@@ -244,6 +260,7 @@ CSL,2026,2026-03-06,Chengdu Rongcheng,Shenzhen Peng City,5,1,false,League,Round 
 - 按 `competition` 分开训练
 - `WorldCup` 会合并 `WorldCupQualifiers`
 - `WomenWorldCup` 会合并 `WomenWorldCupQualifiers`
+- `ChampionsLeague` 会合并 `ChampionsLeagueQualifiers`
 - `EPL`、`CSL` 单独训练
 - 只训练 `score_basis=FT90` 的比赛
 - 预选赛默认低于正赛权重
@@ -264,7 +281,7 @@ CSL,2026,2026-03-06,Chengdu Rongcheng,Shenzhen Peng City,5,1,false,League,Round 
 
 训练快速模式会：
 
-- 世界杯 / 女足世界杯：只保留当前双方相关的预选赛，同时保留正赛
+- 世界杯 / 女足世界杯 / 欧冠：只保留当前双方相关的预选赛，同时保留正赛
 - 英超 / 中超：数据过多时保留最近比赛
 
 这个模式用于提高本地交互速度，不改变 CSV 原始数据。
@@ -331,6 +348,7 @@ CSL,2026,2026-03-06,Chengdu Rongcheng,Shenzhen Peng City,5,1,false,League,Round 
 - 市场概率和 EV
 - 赛前人工修正
 - 女足世界杯数据源
+- 欧冠数据源
 - 回测与特征层
 
 ## Git 使用
@@ -374,4 +392,3 @@ git push
 5. 加入 FIFA/Elo/联赛强度作为跨赛区锚点。
 6. 单独做晋级概率模块，不用 90 分钟胜平负替代。
 7. 接入真实赔率源，但只用于市场对比和融合概率。
-

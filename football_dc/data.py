@@ -46,12 +46,19 @@ FOOTBALL_DATA_COMPETITION_MAP = {
 }
 
 TEAM_NAME_ALIASES = {
+    "Atleti": "Atlético de Madrid",
+    "B. Dortmund": "Borussia Dortmund",
+    "Bayern München": "Bayern Munich",
     "Cape Verde": "Cabo Verde",
     "Curacao": "Curaçao",
     "Czech Republic": "Czechia",
     "IR Iran": "Iran",
     "Korea DPR": "North Korea",
     "Korea Republic": "South Korea",
+    "Man City": "Manchester City",
+    "M. Tel-Aviv": "Maccabi Tel Aviv",
+    "Paris": "Paris Saint-Germain",
+    "Qarabag": "Qarabağ",
     "Türki̇ye": "Turkey",
     "Türkiye": "Turkey",
     "USA": "United States",
@@ -72,6 +79,7 @@ SCORE_BASIS_MAP = {
 TRAINING_COMPETITION_GROUPS = {
     "WorldCup": ["WorldCup", "WorldCupQualifiers"],
     "WomenWorldCup": ["WomenWorldCup", "WomenWorldCupQualifiers"],
+    "ChampionsLeague": ["ChampionsLeague", "ChampionsLeagueQualifiers"],
 }
 
 
@@ -89,6 +97,8 @@ COMPETITIONS: Dict[str, CompetitionConfig] = {
     "WorldCupQualifiers": CompetitionConfig(code="WorldCupQualifiers", label="世界杯预选赛", default_neutral_site=False),
     "WomenWorldCup": CompetitionConfig(code="WomenWorldCup", label="女足世界杯", default_neutral_site=True),
     "WomenWorldCupQualifiers": CompetitionConfig(code="WomenWorldCupQualifiers", label="女足世界杯预选赛", default_neutral_site=False),
+    "ChampionsLeague": CompetitionConfig(code="ChampionsLeague", label="欧冠", default_neutral_site=False),
+    "ChampionsLeagueQualifiers": CompetitionConfig(code="ChampionsLeagueQualifiers", label="欧冠预选赛", default_neutral_site=False),
 }
 
 
@@ -170,6 +180,14 @@ def infer_match_importance(row: pd.Series) -> float:
         return 0.9
     if competition in {"WorldCupQualifiers", "WomenWorldCupQualifiers"}:
         return 0.75
+    if competition == "ChampionsLeague":
+        if "knockout" in stage or round_name in {"knockout phase play-offs", "round of 16", "quarterfinals", "semifinals", "final"}:
+            return 0.9
+        if "league" in stage or round_name == "league phase":
+            return 0.85
+        return 0.8
+    if competition == "ChampionsLeagueQualifiers":
+        return 0.55
     if competition in {"EPL", "CSL"}:
         return 0.7
     return 0.5
